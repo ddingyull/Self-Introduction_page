@@ -1,0 +1,308 @@
+@charset "utf-8";
+/* font-family: 'Arimo', sans-serif; */
+/* font-family: 'Courgette', cursive; */
+/* font-family: 'Libre Baskerville', serif; */
+@import url('https://fonts.googleapis.com/css2?family=Arimo&family=Courgette&family=Libre+Baskerville&display=swap');
+
+/* COMMON */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* background-color: #eee; */
+  font-family: 'Courier New', Courier, monospace;
+}
+
+ul,li,ol{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+/* HEADER */
+header{
+  position: absolute;
+  display: flex;
+  width: 100%;
+  top: 0;
+  left: 0;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vw 5vh;
+  z-index: 1;
+}
+
+header .logo{
+  font : 20px/1 "Libre Baskerville";
+}
+
+header .logo a{
+  color: #333;
+}
+
+header .gnb{
+  display: flex;
+}
+
+header .gnb li{
+  margin-left: 50px;
+}
+
+header .gnb li:first-child{
+  margin-left: 450px;
+}
+
+header .gnb a{
+  color: #555;
+  font: 15px/1 "Arimo";
+  letter-spacing: 1px;
+}
+
+header .snb i{
+  font-size: 1.6vw;
+  color: #333;
+}
+
+header .snb{
+  display: block;
+  color: #c8c8c8;
+}
+
+header .snb .btn_menu{
+  color: #fff;
+  font-size: 30px;
+}
+
+header .snb .sub_menu{
+  position: absolute;
+  right: 5vw;
+  padding: 10px 25px;
+  background-color: #eee;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  text-align: right;
+  opacity: 1;
+  transition: .3s;
+}
+
+header .snb .sub_menu.hide{
+  opacity: 0;
+}
+
+header .snb .sub_menu li{
+  padding: 10px 0;
+  font: 16px/1 'Arimo';
+  color: #c8c8c8;
+}
+
+header .snb .sub_menu a{
+  color: #555;
+}
+
+header .snb .sub_menu.hide{
+  opacity: 0;
+  /* display: none; */
+}
+
+header .sns{
+  display: block;
+  transform: rotate(270deg);
+  position: absolute;
+  top: 30vh;
+  left: -70px;
+}
+
+header .sns a{
+  margin-right: 20px;
+  color: #333;
+  font-size: 8px;
+  left: 0;
+}
+
+header .sns>i{
+  font-size: 8px;
+}
+
+
+/* figure */
+figure .background{
+  background-color: #C9BBCF;
+  width: 75%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+}
+
+figure .mainText >span{
+  font : 13vw/1 "Libre Baskerville";
+  color: #eee;
+}
+
+figure .mainText{
+  font : 6vw/1 "Libre Baskerville";
+  font-weight: 700;
+  position: absolute;
+  bottom: 10vh;
+  left: 5vw;
+  color: #eee;
+}
+
+figure .mainText> div{
+  font: 1.5vw/1 "Libre Baskerville";
+  position: absolute;
+  bottom: 28vh;
+  left: 10vw;
+  color: #555;
+}
+
+figure .content .first >img{
+  width: 18vw;
+  height: 50vh;
+  position: absolute;
+  top: 20vh;
+  right: 34vw;
+  overflow: hidden;
+  z-index: 1;
+}
+
+figure .content .second >video{
+  width: 50%;
+  height: 70vh;
+  position: absolute;
+  top: 20vh;
+  right: -45px;
+}
+
+figure .content .second >p{
+  color: #eee;
+}
+
+/* FOOTER */
+footer{
+  width: 100%;
+  position: absolute;
+  bottom: 1.5vh;
+  left: 0;
+  font: 7px/1 "arial";
+  color: lightgrey;
+  letter-spacing: 2px;
+  text-align: center;
+  padding: 2vh vw;
+  z-index: 2;
+}
+
+
+/* MOBILE */
+@media screen and (max-width: 1100px) {
+
+  figure .mainText> div{
+    font: 1.8vw/1 "Libre Baskerville";
+    position: absolute;
+    bottom: 10vh;
+    left: 9vw;
+    color: #333;
+  } 
+
+  figure .mainText> div{
+    font: 1.5vw/1 "Libre Baskerville";
+    position: absolute;
+    bottom: 21vh;
+    left: 9vw;
+  }
+}
+
+@media screen and (max-width: 928px) {
+  header .gnb{
+    display: none;
+  }
+
+  header .snb i{
+    font-size: 2vw;
+    color: #333;
+  }
+
+  header .snb .sub_menu.hide{
+    opacity: 0;
+  }
+
+  figure .content .first >img{
+    display: none;
+  }
+
+  figure .content .second >video{
+    width: 30vw;
+    height: 50vh;
+    position: absolute;
+    top: 10%;
+    left: 40vw;
+  }
+
+  figure .background{
+    background-color: #C9BBCF;
+    width: 100%;
+  }
+  
+  figure .mainText >span{
+    font : 16vw/1 "Libre Baskerville";
+    color: #eee;
+  }
+  
+  figure .mainText{
+    font : 8vw/1 "Libre Baskerville";
+    font-weight: 700;
+    position: absolute;
+    bottom: 10vh;
+    left: 30vw;
+    color: #eee;
+  }
+
+  figure .mainText> div{
+  display: none;
+  }
+
+}
+
+@media screen and (max-width: 650px) {
+  header .snb i{
+    font-size: 3vw;
+  }
+
+  figure .mainText> div{
+    font: .6vw/1 "Libre Baskerville";
+    position: absolute;
+    bottom: 8vh;
+    left: 9vw;
+  }
+  
+  figure .mainText >span{
+    font : 16vw/1 "Libre Baskerville";
+    color: #eee;
+  }
+  
+  figure .mainText{
+    font : 8vw/1 "Libre Baskerville";
+    font-weight: 700;
+    position: absolute;
+    bottom: 10vh;
+    left: 25vw;
+    color: #eee;
+  }
+
+  figure .mainText> div{
+  display: none;
+  }
+
+  figure .content .first >img{
+    display: none;
+  }
+
+  figure .content .second >video{
+    width: 50vw;
+    height: 60vh;
+    position: absolute;
+    top: 10%;
+    left: 30vw;
+  }
+}
